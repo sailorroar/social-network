@@ -10,5 +10,7 @@
 
   grid-gap: 5px;
 
-  background-color: aquamarine;
+  background-color: black;
+
+  min-height: 100vh;
 }
