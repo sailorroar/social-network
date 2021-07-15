@@ -7,24 +7,8 @@
 
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-}
 
-.header {
-  grid-area: h;
-  background-color: #564F6F;
-}
+  grid-gap: 5px;
 
-.header img {
-  height: 60px;
-  width: 60px;
-}
-
-.navigation {
-  grid-area: n;
-  background-color: #374859;
-}
-
-.content {
-  grid-area: c;
-  background-color: #2d283e;
+  background-color: aquamarine;
 }

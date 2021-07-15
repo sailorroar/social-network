@@ -1,0 +1,8 @@
+.navigation {
+    grid-area: n;
+    background-color: #374859;
+}
+
+.navigation a {
+    text-decoration: none;
+}
