@@ -1,4 +1,28 @@
 .post img {
     width: 50px;
     border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.post {
+    background-color: #333336;
+    margin: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.postButton {
+    display: inline;
+}
+
+.likeButton {
+    margin: 5px;
+    background-color: #222226;
+    color: #757575;
+}
+
+.repostButton {
+    background-color: #222226;
+    color: #757575;
 }

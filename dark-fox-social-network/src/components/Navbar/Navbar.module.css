@@ -1,6 +1,6 @@
 .navigation {
     grid-area: n;
-    background-color: #374859;
+    background-color: #222226;
     margin-left: 5px;
     margin-bottom: 5px;
     border-radius: 10px;
@@ -8,4 +8,20 @@
 
 .navigation a {
     text-decoration: none;
+    color: #727272;
+    display: block;
+}
+
+.navigation div {
+    background-color: #222226;
+    margin: 5px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.navigation a:hover {
+    background-color: #333336;
+    border-radius: 5px;
 }

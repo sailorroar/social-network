@@ -10,8 +10,8 @@ const MyPosts = () => {
             </div>
             <div className={classes.postTape}>
                 Post tape
-                <Post />
-                <Post />
+                <Post postMessage='Test Post' likeCount='14' />
+                <Post postMessage='Hello!' likeCount='700' />
                 <Post />
             </div>
         </div>
