@@ -8,7 +8,7 @@ const Post = (props) => {
                     alt='fox' />
                 Author Name
             </div>
-            <div>
+            <div className={classes.postMessage}>
                 {props.postMessage}
             </div>
             <div className={classes.postButton} >

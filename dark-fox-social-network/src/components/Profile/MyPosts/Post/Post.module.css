@@ -17,12 +17,33 @@
 }
 
 .likeButton {
-    margin: 5px;
     background-color: #222226;
     color: #757575;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 100px;
+    height: 25px;
+    margin: 5px;
 }
 
 .repostButton {
     background-color: #222226;
     color: #757575;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+
+.postButton button:hover {
+    background-color: #555556;
+    color: #fff;
+}
+
+.postMessage {
+    margin: 5px;
 }

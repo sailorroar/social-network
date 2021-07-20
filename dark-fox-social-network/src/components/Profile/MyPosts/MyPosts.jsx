@@ -1,18 +1,25 @@
 import classes from './MyPosts.module.css'
 import Post from './Post/Post'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+    
+    let postElements = props.postsData.map((p) =>
+        <Post postMessage={p.postMessage} likeCount={p.likeCount} />
+    );
+
     return (
         <div>
-            My posts
+            <h3>My posts</h3>
             <div>
                 New post
+                <div className={classes.newPostForm}>
+                    <textarea></textarea>
+                    <button>Send</button>
+                </div>
             </div>
             <div className={classes.postTape}>
                 Post tape
-                <Post postMessage='Test Post' likeCount='14' />
-                <Post postMessage='Hello!' likeCount='700' />
-                <Post />
+                {postElements}
             </div>
         </div>
     )

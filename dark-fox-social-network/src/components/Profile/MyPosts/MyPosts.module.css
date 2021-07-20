@@ -1,0 +1,26 @@
+.newPostForm textarea {
+    background-color: #333336;
+    color: #fff;
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    display: block;
+    margin: 5px;
+}
+
+.newPostForm button {
+    background-color: #333336;
+    color: #757575;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 100px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.newPostForm button:hover {
+    background-color: #555556;
+    color: #fff;
+}

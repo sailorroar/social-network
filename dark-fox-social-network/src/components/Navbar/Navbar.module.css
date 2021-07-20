@@ -24,4 +24,5 @@
 .navigation a:hover {
     background-color: #333336;
     border-radius: 5px;
+    color: #fff;
 }
