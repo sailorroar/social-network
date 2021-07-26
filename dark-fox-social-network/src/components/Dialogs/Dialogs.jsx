@@ -25,7 +25,7 @@ const Dialogs = (props) => {
 
                 <div className={classes.sendMessage} >
                     <div>
-                        <textarea></textarea>
+                        <textarea />
                     </div>
                     <div>
                         <button>Send</button>
