@@ -11,10 +11,8 @@
   grid-gap: 5px;
 
   background-color: #222226;
-
-  min-height: 100vh;
+  
   position: absolute;
-  height: 100%;
   width: calc(100% - 240px);
   left: 240px;
 }

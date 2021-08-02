@@ -1,6 +1,7 @@
 import classes from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
+import { AiOutlineSend } from 'react-icons/ai'
 
 const Dialogs = (props) => {
 
@@ -19,21 +20,25 @@ const Dialogs = (props) => {
                 {dialogsElements}
 
             </div>
-            <div className={classes.messages} >
 
-                {messageElenents}
-
-                <div className={classes.sendMessage} >
-                    <div>
-                        <textarea />
+            <div className={classes.chat} >
+                <div className={classes.chatHeader} >
+                    <div className={classes.chatImg}>
+                        <img src='https://emojitool.ru/img/apple/ios-11.3/octopus-1545.png' alt='octopus'></img>
                     </div>
-                    <div>
-                        <button>Send</button>
+                    <div className={classes.chatName}>
+                        <span>Dialogs name</span>
                     </div>
-
                 </div>
-
+                <div className={classes.chatBody}>
+                    {messageElenents}
+                </div>
+                <div className={classes.chatFotter}>
+                    <input placeholder='Введите сообщение...' type='text' ></input>
+                    <i><AiOutlineSend /></i>
+                </div>
             </div>
+
         </div>
     )
 }

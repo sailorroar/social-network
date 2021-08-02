@@ -25,42 +25,42 @@ const Navbar = () => {
                         <li>
                             <NavLink to='/profile'>
                                 <i><CgProfile /></i>
-                                <span className='linksName'>Profile</span>
+                                <span className={classes.linksName}>Profile</span>
                             </NavLink>
                             <span className={classes.tooltip} >Profile</span>
                         </li>
                         <li>
                             <NavLink to='/friends'>
                                 <i><FiUsers /></i>
-                                <span className='linksName'>Friends</span>
+                                <span className={classes.linksName}>Friends</span>
                             </NavLink>
                             <span className={classes.tooltip} >Friends</span>
                         </li>
                         <li>
                             <NavLink to='/dialogs'>
                                 <i><BiChat /></i>
-                                <span className='linksName'>Message</span>
+                                <span className={classes.linksName}>Message</span>
                             </NavLink>
                             <span className={classes.tooltip} >Message</span>
                         </li>
                         <li>
                             <NavLink to='/news'>
                                 <i><FaRegNewspaper /></i>
-                                <span className='linksName'>News</span>
+                                <span className={classes.linksName}>News</span>
                             </NavLink>
                             <span className={classes.tooltip} >News</span>
                         </li>
                         <li>
                             <NavLink to='/music'>
                                 <i><BsMusicPlayer /></i>
-                                <span className='linksName'>Music</span>
+                                <span className={classes.linksName}>Music</span>
                             </NavLink>
                             <span className={classes.tooltip} >Music</span>
                         </li>
                         <li>
                             <NavLink to='/setting'>
                                 <i><AiOutlineSetting /></i>
-                                <span className='linksName'>Setting</span>
+                                <span className={classes.linksName}>Setting</span>
                             </NavLink>
                             <span className={classes.tooltip} >Setting</span>
                         </li>

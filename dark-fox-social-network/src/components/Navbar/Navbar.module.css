@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap'); */
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 .navigation {
     position: relative;
@@ -35,7 +35,7 @@
 .logoContent .logo i {
     font-size: 37px;
     margin-right: 5px;
-    line-height: 0;
+    line-height: 0px;
 }
 
 .logoContent .logo .logoName {
@@ -57,7 +57,7 @@
 }
 
 .sidebar ul{
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .sidebar ul li {
