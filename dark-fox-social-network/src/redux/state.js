@@ -1,57 +1,62 @@
-let rerenderEntireTree = () => {
-    console.log('State change')
-}
+let store = {
+    _state: {
 
-let state = {
+        profilePage: {
+            postsDate: [
+                { id: 1, postMessage: 'Test Post', likeCount: '15' },
+                { id: 2, postMessage: 'Hello!', likeCount: '233' },
+                { id: 3, postMessage: 'its my post!', likeCount: '415' },
+                { id: 4, postMessage: 'i am from React', likeCount: '965' }
+            ],
 
-    profilePage: {
-        postsDate: [
-            { id: 1, postMessage: 'Test Post', likeCount: '15' },
-            { id: 2, postMessage: 'Hello!', likeCount: '233' },
-            { id: 3, postMessage: 'its my post!', likeCount: '415' },
-            { id: 4, postMessage: 'i am from React', likeCount: '965' }
-        ],
+            newPostText: 'Hello NJigger'
+        },
 
-        newPostText: 'Hello NJigger'
+        dialogsPage: {
+            messageData: [
+                { id: 1, message: 'Hi' },
+                { id: 2, message: 'How are you?' },
+                { id: 3, message: 'i am fine,thank you' }
+            ],
+
+            dialogsData:
+                [
+                    { id: 1, name: 'Kolya' },
+                    { id: 2, name: 'Dima' },
+                    { id: 3, name: 'Sneg' },
+                    { id: 4, name: 'Kotya' },
+                    { id: 5, name: 'Octopus' }
+                ]
+        }
     },
 
-    dialogsPage: {
-        messageData: [
-            { id: 1, message: 'Hi' },
-            { id: 2, message: 'How are you?' },
-            { id: 3, message: 'i am fine,thank you' }
-        ],
+    _callSubscriber() {
+        console.log('State change')
+    },
 
-        dialogsData:
-            [
-                { id: 1, name: 'Kolya' },
-                { id: 2, name: 'Dima' },
-                { id: 3, name: 'Sneg' },
-                { id: 4, name: 'Kotya' },
-                { id: 5, name: 'Octopus' }
-            ]
+    getState() {
+        return this._state
+    },
+
+    addPost() {
+        let newPost = {
+            id: 5,
+            postMessage: this._state.profilePage.newPostText,
+            likeCount: 727
+        }
+
+        this._state.profilePage.postsDate.push(newPost)
+        this._state.profilePage.newPostText = ''
+        this._callSubscriber(this._state)
+    },
+
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText
+        this._callSubscriber(this._state)
+    },
+
+    subscride(observer) {
+        this._callSubscriber = observer
     }
 }
-
-export const addPost = () => {
-    let newPost = {
-        id: 5,
-        postMessage: state.profilePage.newPostText,
-        likeCount: 727
-    }
-
-    state.profilePage.postsDate.push(newPost)
-    state.profilePage.newPostText = ''
-    rerenderEntireTree(state)
-}
-
-export const updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText
-    rerenderEntireTree(state)
-}
-
-export const subscride = (observer) => {
-    rerenderEntireTree = observer
-}
-
-export default state
+export default store

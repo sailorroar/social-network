@@ -1,28 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .navigation {
-    grid-area: n;
-    background-color: #222226;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #727272;
-    display: block;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background-color: #11101f;
+    padding: 6px 14px;
 }
 
-.navigation div {
-    background-color: #222226;
-    margin: 5px;
-    border-radius: 5px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-}
-
-.navigation a:hover {
-    background-color: #333336;
-    border-radius: 5px;
+.sidebar .logoContent .logo {
     color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
 }
+
+.logoContent .logo i {
+    font-size: 37px;
+    margin-right: 5px;
+    line-height: 0;
+}
+
+.logoContent .logo .logoName {
+    font-size: 37px;
+    font-weight: 400;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    left: 90%;
+    top: 6px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar ul{
+    margin-top: 35px;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.sidebar ul li a:hover {
+    color: #11101f;
+    background-color: #fff;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background-color: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    top: 50%;
+    opacity: 0; /* всплывающие окошки(доработать до рабочего состояния) */
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px
+}
+
+.sidebar .logOut {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+}
+
+.logOut #logOutIcons{
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 35px;
+    border-radius: 12px;
+}
+
+/* #1d1b31 */
