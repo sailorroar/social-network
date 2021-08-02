@@ -48,15 +48,14 @@
     border-top-left-radius: 10px;
     padding: 5px;
     height: 6%;
-
-
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
     line-height: 50px;
 }
 
 .chat .chatHeader .chatImg {
-    display: inline-block;
     width: 50px;
 }
 
@@ -64,13 +63,14 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-top: 50%;
 }
 
 .chat .chatHeader .chatName {
-    display: inline-block;
     color: #fff;
     font-size: 18px;
-    line-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chat .chatBody {
@@ -81,22 +81,30 @@
 }
 
 .chat .chatFotter {
-    background-color: #11101f;
-    height: 5%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.chat .chatFotter {
-    width: 100%;
-}
-
-.chat .chatFotter i {
-    cursor: pointer;
     color: #fff;
-    font-size: 30px;
-    margin-left: 5px;
-    line-height: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #11101f;
+    height: 52px;
+}
+
+.chat .chatFotter i button{
+    height: 52px;
+    min-width: 50px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    background-color: #11101f;
+    outline: none;
+    border: 0;
+}
+
+.chat .chatFotter i button:hover {
+    background-color: #1d1b31;
 }
 
 .chat .chatFotter input {

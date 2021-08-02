@@ -34,8 +34,8 @@ const Dialogs = (props) => {
                     {messageElenents}
                 </div>
                 <div className={classes.chatFotter}>
-                    <input placeholder='Введите сообщение...' type='text' ></input>
-                    <i><AiOutlineSend /></i>
+                        <input placeholder='Введите сообщение...' type='text'></input>
+                        <i><button><AiOutlineSend /></button></i>
                 </div>
             </div>
 

@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
+const SEND_MESSAGE = 'SEND-MESSAGE'
 
 let store = {
     _state: {
@@ -29,7 +31,8 @@ let store = {
                     { id: 3, name: 'Sneg' },
                     { id: 4, name: 'Kotya' },
                     { id: 5, name: 'Octopus' }
-                ]
+                ],
+            newMessageText : 'Введите сообщение...'
         }
     },
 
@@ -46,7 +49,7 @@ let store = {
     },
 
     dispatch(action) { //type : 'ACTION TYPE'
-        if (action.type === 'ADD-POST') {
+        if (action.type === ADD_POST) {
             let newPost = {
                 id: 5,
                 postMessage: this._state.profilePage.newPostText,
@@ -56,8 +59,16 @@ let store = {
             this._state.profilePage.postsDate.push(newPost)
             this._state.profilePage.newPostText = ''
             this._callSubscriber(this._state)
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+            this._state.dialogsPage.newMessageText = action.newText
+            this._callSubscriber(this._state)
+        } else if (action.type === SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMessageText
+            this._state.dialogsPage.newMessageText = ''
+            this._state.dialogsPage.messageData.push({id: 6, message: body})
             this._callSubscriber(this._state)
         }
     }
@@ -73,6 +84,19 @@ export const updateNewPostTextActionCreator = (text) => {
     return {
         type: UPDATE_NEW_POST_TEXT,
         newText: text
+    }
+}
+
+export const sendMessageActionCreator = () => {
+    return {
+        type: SEND_MESSAGE
+    }
+}
+
+export const updateNewMessageActionCreator = (body) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_TEXT,
+        body: body
     }
 }
 
