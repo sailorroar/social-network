@@ -2,16 +2,31 @@ import classes from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import { AiOutlineSend } from 'react-icons/ai'
+import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer'
+
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.state.dialogsData.map((d) =>
+    let state = props.store.getState().dialogsPage;
+
+    let dialogsElements = state.dialogs.map((d) =>
         <DialogItem id={d.id} name={d.name} />
     );
 
-    let messageElenents = props.state.messageData.map((m) =>
+    let messageElenents = state.messages.map((m) =>
         <Message message={m.message} ></Message>
     );
+
+    let newMessageBody = state.newMessageBody
+
+    let onSendMessageClick = () => {
+        props.store.dispatch(sendMessageCreator());
+    }
+
+    let onNewMessageChange = (event) => {
+        let body = event.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
+    }
 
     return (
         <div className={classes.dialogs} >
@@ -34,8 +49,13 @@ const Dialogs = (props) => {
                     {messageElenents}
                 </div>
                 <div className={classes.chatFotter}>
-                        <input placeholder='Введите сообщение...' type='text'></input>
-                        <i><button><AiOutlineSend /></button></i>
+                    <input
+                    type='text'
+                        placeholder='Enter your message...'
+                        onChange={onNewMessageChange}
+                        value={ newMessageBody }
+                    ></input>
+                    <i><button onClick={onSendMessageClick} ><AiOutlineSend /></button></i>
                 </div>
             </div>
 

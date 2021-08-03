@@ -40,6 +40,7 @@
     position: static;
     height: 80vh;
     width: 75%;
+    border: 1px solid white
 }
 
 .chat .chatHeader {
@@ -104,7 +105,8 @@
 }
 
 .chat .chatFotter i button:hover {
-    background-color: #1d1b31;
+    color: #1d1b31;
+    cursor: pointer;
 }
 
 .chat .chatFotter input {
