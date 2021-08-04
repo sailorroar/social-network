@@ -8,7 +8,7 @@ import Setting from './components/Setting/Setting'
 import Music from './components/Music/Music'
 import { Route } from 'react-router-dom'
 
-const App = (props) => {
+const App = () => {
 
   return (
     <div className='app-wrapper' >
@@ -16,11 +16,9 @@ const App = (props) => {
       <Header />
       <div className="app-wrapper-content">
         <Route exact path='/profile' render={() =>
-          <Profile
-            store={props.store} />} />
+          <Profile />} />
         <Route exact path='/dialogs' render={() =>
-          <DialogsContainer
-            store={props.store} />} />
+          <DialogsContainer />} />
         <Route exact path='/news' render={() => <News />} />
         <Route exact path='/setting' render={() => <Setting />} />
         <Route exact path='/music' render={() => <Music />} />

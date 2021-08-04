@@ -9,20 +9,15 @@ let initialState = {
         { id: 4, postMessage: 'i am from React', likeCount: '965' }
     ],
 
-    newPostText: 'Hello NJigger'
+    newPostText: ''
 }
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
-            let newPost = {
-                id: 5,
-                postMessage: state.newPostText,
-                likeCount: 727
-            }
-
-            state.postsDate.push(newPost)
+            let text = state.newPostText
             state.newPostText = ''
+            state.postsDate.push({ id: 5, postMessage: text })
             return state
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newText

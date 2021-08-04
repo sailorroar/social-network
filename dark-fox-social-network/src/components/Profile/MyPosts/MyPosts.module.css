@@ -1,11 +1,14 @@
-.newPostForm textarea {
-    background-color: #333336;
+.newPostForm input {
+    background-color: #1d1b31;
+    height: 40px;
+    border-radius: 10px;
+    outline:none;
+    border: 0px;
     color: #fff;
-    border-radius: 5px;
     width: 50%;
-    height: 100%;
-    display: block;
-    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #11101f ;
 }
 
 .newPostForm button {

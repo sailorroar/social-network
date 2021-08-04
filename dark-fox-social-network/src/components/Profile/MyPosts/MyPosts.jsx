@@ -26,10 +26,12 @@ const MyPosts = (props) => {
             <div>
                 New post
                 <div className={classes.newPostForm}>
-                    <textarea ref={newPostElement}
+                    <input ref={newPostElement}
+                        type='text'
+                        placeholder='Enter your text...'
                         value={props.newPostText}
-                        onChange={ onPostChange } />
-                    <button onClick={ onAddPost } >Send</button>
+                        onChange={onPostChange}></input>
+                    <button onClick={onAddPost} >Send</button>
                 </div>
             </div>
             <div className={classes.postTape}>
