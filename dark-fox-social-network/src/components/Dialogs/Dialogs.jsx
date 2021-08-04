@@ -2,12 +2,11 @@ import classes from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import { AiOutlineSend } from 'react-icons/ai'
-import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer'
 
 
 const Dialogs = (props) => {
 
-    let state = props.store.getState().dialogsPage;
+    let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs.map((d) =>
         <DialogItem id={d.id} name={d.name} />
@@ -20,12 +19,12 @@ const Dialogs = (props) => {
     let newMessageBody = state.newMessageBody
 
     let onSendMessageClick = () => {
-        props.store.dispatch(sendMessageCreator());
+        props.sendMessage()
     }
 
     let onNewMessageChange = (event) => {
         let body = event.target.value;
-        props.store.dispatch(updateNewMessageBodyCreator(body));
+        props.updateNewMessageBody(body)
     }
 
     return (
