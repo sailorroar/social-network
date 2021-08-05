@@ -3,25 +3,18 @@ import reportWebVitals from './reportWebVitals'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import { Provider } from './StoreContex'
+import { Provider } from 'react-redux'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 
-let rerenderEntireTree = (state) => {
-  ReactDOM.render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>,
-    document.getElementById('root')
-  )
-}
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById('root')
+)
 
-rerenderEntireTree()
-
-store.subscribe(() => {
-  rerenderEntireTree()
-})
 
 reportWebVitals();

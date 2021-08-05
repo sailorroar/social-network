@@ -6,7 +6,7 @@ const MyPosts = (props) => {
     debugger
 
     let postElements = props.postsDate.map((p) =>
-        <Post postMessage={p.postMessage} likeCount={p.likeCount} />
+        <Post postMessage={p.postMessage} key={p.id} likeCount={p.likeCount} />
     );
 
     let newPostElement = React.createRef()
