@@ -1,0 +1,30 @@
+.userBox {
+    background-color: #11101f;
+    width: 75%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr 1fr;
+    color: #fff;
+}
+
+.photoBox img {
+    width: 50px;
+    margin: 5px;
+}
+
+.buttonBox button{
+    font-size: 40px;
+    background-color: #11101f;
+    border: 0;
+    color: #fff;
+    height: 100%;
+    line-height:100%;
+}
+
+.infoBox {
+    margin: 5px;
+}

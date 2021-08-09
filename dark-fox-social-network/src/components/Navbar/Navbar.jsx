@@ -30,11 +30,11 @@ const Navbar = () => {
                             <span className={classes.tooltip} >Profile</span>
                         </li>
                         <li>
-                            <NavLink to='/friends'>
+                            <NavLink to='/users'>
                                 <i><FiUsers /></i>
-                                <span className={classes.linksName}>Friends</span>
+                                <span className={classes.linksName}>Users</span>
                             </NavLink>
-                            <span className={classes.tooltip} >Friends</span>
+                            <span className={classes.tooltip} >Users</span>
                         </li>
                         <li>
                             <NavLink to='/dialogs'>
